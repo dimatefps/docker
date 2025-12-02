@@ -3,17 +3,21 @@
 Abaixo os códigos-fonte para você copiar e colar
 Executando um contêiner
 
-```docker pull ubuntu
+``` 
+docker pull ubuntu
 docker run ubuntu
 docker run ubuntu sleep 10
 docker run ubuntu sleep 1500
 docker stop [id]
 docker run --help
-docker run -it ubuntu```
+docker run -it ubuntu
+ ```
 
 Executando aplicações no contêiner
-```docker run -dti  ubuntu 
-docker exec -it [id ou nome]  /bin/bash```
+```
+docker run -dti  ubuntu 
+docker exec -it [id ou nome]  /bin/bash
+```
 
  
 Excluindo e nomeando contêineres
@@ -21,26 +25,34 @@ Excluindo e nomeando contêineres
 docker rm [id]
 docker rmi [imagem]
 
-docker run -dti --name Ubuntu-A ubuntu```
+docker run -dti --name Ubuntu-A ubuntu
+```
 
  
 Copiando arquivos para o contêiner
-```docker exec -ti Ubuntu-A /bin/bash
+```
+docker exec -ti Ubuntu-A /bin/bash
 docker exec Ubuntu-A mkdir /destino/
 docker exec Ubuntu-A mkdir ls -l /
 nano Arquivo.txt
-docker cp arquivo.txt Ubuntu-A:/aula/```
+docker cp arquivo.txt Ubuntu-A:/aula/
+```
 
 Copiando arquivos do container
 
-```docker cp Ubuntu-A:/destino/Meuzip.zip  Zipcopia.zip```
+```
+docker cp Ubuntu-A:/destino/Meuzip.zip  Zipcopia.zip
+```
 
 Criando um contêiner do MySQL
 
-```docker cp Ubuntu-A:/destino/Meuzip.zip  Zipcopia.zip```
+```
+docker cp Ubuntu-A:/destino/Meuzip.zip  Zipcopia.zip
+```
 
 Acessando um container externamente
-```# docker pull mysql
+```
+# docker pull mysql
  
 # docker run -e MYSQL_ROOT_PASSWORD=Senha123 --name mysql-A -d -p 3306:3306 mysql
 
@@ -54,7 +66,8 @@ show databases;
 
 # docker inspect mysql-A
 
-# mysql -u root -p --protocol=tcp```
+# mysql -u root -p --protocol=tcp
+```
 
 
 
